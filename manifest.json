@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube & Twitch Volume Controller by Mouse Wheel",
+  "version": "1.1.0",
+  "description": "YouTubeとTwitchの動画上でマウスホイールを回すことで、音量を1%ずつ調整できるようにします。",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.twitch.tv/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end",
+      "world": "MAIN"
+    }
+  ]
+}
